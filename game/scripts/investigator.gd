@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends Node2D
 
 @onready var clueNumber = self.get_meta("clue_number")
 @onready var nextClue = self.get_meta("next_clue")
