@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dj2kbgo7kvdxt" path="res://player.gd" id="1_pfgo0"]
 [ext_resource type="Texture2D" uid="uid://0d5ej02h6kx" path="res://Assets/TristanGhost.png" id="1_w2ac3"]
+[ext_resource type="Script" uid="uid://brs3soa26k7jt" path="res://control.gd" id="3_lilb6"]
 
 [sub_resource type="Animation" id="Animation_pfgo0"]
 length = 0.001
@@ -39,8 +40,8 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m3xmp"]
-radius = 182.0
-height = 422.0
+radius = 21.0
+height = 64.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pfgo0"]
 atlas = ExtResource("1_w2ac3")
@@ -121,9 +122,12 @@ root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_lilb6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1978857132]
+position = Vector2(496, 254)
 shape = SubResource("CapsuleShape2D_m3xmp")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Player" unique_id=2140642072]
+position = Vector2(496, 251)
+scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_a7mne")
 animation = &"idle_animation"
 autoplay = "idle_animation"
@@ -131,3 +135,22 @@ frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=474702789]
 zoom = Vector2(5, 5)
+[node name="Control" type="Control" parent="." unique_id=1148686791]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 355.0
+offset_top = 26.0
+offset_right = 796.0
+offset_bottom = 146.0
+script = ExtResource("3_lilb6")
+
+[node name="Timer" type="Timer" parent="Control" unique_id=1356253790]
+
+[node name="Label" type="Label" parent="Control" unique_id=63215590]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 51.0
+offset_right = 681.0
+offset_bottom = 77.0
+
+[connection signal="timeout" from="Control/Timer" to="Control/Timer" method="_on_timeout"]
