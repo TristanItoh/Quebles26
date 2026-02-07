@@ -2,7 +2,6 @@ extends Control
 
 func _ready():
 	Reset_Timer()
-	pass # Replace with function body.
 
 var sec = 0
 var min = 0
@@ -17,9 +16,7 @@ func _on_timeout():
 			sec = 60		#Pass the Timer
 	sec-=1
 
-	$Label.text = String(sec)+":"+String(min)
-	print(String(sec)+":"+String(min))
-	pass # Replace with function body.
+	$Label.text = str(sec)+": "+str(min)
 	
 func Reset_Timer():
 	sec = defsec

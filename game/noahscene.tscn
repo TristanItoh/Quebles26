@@ -145,9 +145,9 @@ script = ExtResource("3_lilb6")
 
 [node name="Label" type="Label" parent="Control" unique_id=63215590]
 layout_mode = 0
-offset_left = 426.0
+offset_left = -252.0
 offset_top = 51.0
-offset_right = 681.0
+offset_right = 164.0
 offset_bottom = 77.0
 
 [connection signal="timeout" from="Control/Timer" to="Control/Timer" method="_on_timeout"]
