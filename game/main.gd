@@ -13,7 +13,7 @@ func _ready() -> void:
 # Async function for the intro
 func show_intro() -> void:
 	await DialogueManager.show("You shouldn't be here… or rather, you shouldn't be alive.", null, "Narrator")
-	await DialogueManager.show("Xavier… he ended your life. And now… you've been given a second chance.", null, "Narrator")
+	await DialogueManager.show("Your son… he ended your life. And now… you've been given a second chance.", null, "Narrator")
 	await DialogueManager.show("The world feels… off. You can pass through walls. You can move objects without touching them.", null, "Narrator")
 	await DialogueManager.show("But be careful. Every action has consequences… subtle ones.", null, "Narrator")
 	await DialogueManager.show("Hidden clues are scattered across the house: bottles, documents, journals. Some reveal the truth, others mislead.", null, "Narrator")
