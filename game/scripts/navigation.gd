@@ -18,7 +18,7 @@ func _ready() -> void:
 	#then make the walkable ones not "solid"
 	var cellID = 1;
 	for cell : Vector2i in self.get_used_cells():
-		print(cell)
+
 		astarGrid.set_point_solid(cell, false)
 		cellID += 1
 	
