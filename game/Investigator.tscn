@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://da6qpp2nb8mdx"]
+
+[ext_resource type="Script" uid="uid://c7lr7edo8rp3j" path="res://scripts/investigator.gd" id="1_e0kx2"]
+[ext_resource type="SpriteFrames" uid="uid://dgvm0mxy10s8k" path="res://anim_frames/investigator_frames.tres" id="2_e0kx2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r0ihr"]
+size = Vector2(16, 16)
+
+[node name="Investigator" type="Node2D" unique_id=1354331390]
+script = ExtResource("1_e0kx2")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=268650183]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=255044026]
+sprite_frames = ExtResource("2_e0kx2")
+animation = &"walk_down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=2072105956]
+shape = SubResource("RectangleShape2D_r0ihr")

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cjxlrp0k0y7su"]
+
+[ext_resource type="PackedScene" uid="uid://bxtk4y2df7110" path="res://FamilyMember.tscn" id="1_fpv00"]
+[ext_resource type="SpriteFrames" uid="uid://bhe0j1yyxbynx" path="res://anim_frames/daughter_frames.tres" id="2_yerfb"]
+
+[node name="Daughter" unique_id=1168237234 instance=ExtResource("1_fpv00")]
+
+[node name="AnimatedSprite2D" parent="CharacterBody2D" parent_id_path=PackedInt32Array(287436753) index="0" unique_id=1323906409]
+sprite_frames = ExtResource("2_yerfb")
+animation = &"walk_up"
