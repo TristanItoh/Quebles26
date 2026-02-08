@@ -34,16 +34,16 @@ func _ready() -> void:
 		interactLocations.append([node.global_position, node.get_meta("clue_number")])
 
 func _process(_delta: float) -> void:
-	#figure out what room the investigator is currently in, can place area2Ds around the map and check if the investigator is overlapping one of them to determine the room
-	#roomNumber = currentRoom
+	#ALL TIMER CODE
 	if (timerUntilDoneInvestigating and timerUntilDoneInvestigating.time_left > 0):
 		var time_left = int(timerUntilDoneInvestigating.time_left)
 		$Label.text = "%02d" % time_left
-		
-		
-	if timerUntilDoneInvestigating == null:
-		$Label.text = ""
 	
+		
+	if timerUntilDoneInvestigating == null or timerUntilDoneInvestigating.time_left == 0:
+		$Label.text = "  "
+	
+	# When the investigator runs out of time, change scene to game over
 
 	
 	print("investigator state: " + str(state))
