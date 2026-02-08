@@ -4,8 +4,8 @@ extends Node2D
 @onready var nextClue = self.get_meta("next_clue")
 
 @onready var navigation = self.get_node("/root/Main/Map/Floor/Walkable")
-@onready var daughter = self.get_node("./Daughter/CharacterBody2D")
-@onready var son = self.get_node("../Son/CharacterBody2D")
+@onready var daughter = self.get_node("/root/Main/Daughter/CharacterBody2D")
+@onready var son = self.get_node("/root/Main/Son/CharacterBody2D")
 
 @export var display_name: String
 @export var portrait: Texture2D
