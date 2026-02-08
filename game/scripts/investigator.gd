@@ -2,8 +2,8 @@ extends Node2D
 
 @onready var clueNumber = self.get_meta("clue_number")
 @onready var nextClue = self.get_meta("next_clue")
-@onready var navigation = self.get_node("../Map/Floor/Walkable")
-@onready var daughter = self.get_node("../Daughter/CharacterBody2D")
+@onready var navigation = self.get_node("/root/Main/Map/Floor/Walkable")
+@onready var daughter = self.get_node("./Daughter/CharacterBody2D")
 @export var display_name: String
 @export var portrait: Texture2D
 var state = 0 #0 means the investigator should go to a new location, 1 means traveling to a new location, 2 means investigating a location
@@ -201,8 +201,10 @@ func _on_other_investigation_spots_without_clues_ready() -> void:
 	for node in get_node("./OtherInvestigationSpotsWithoutClues").get_children(): #add the spots where the investigator finds nothing
 		interactLocations.append([node.global_position, 0])
 
-
-
 func _on_clues_ready() -> void:
 	for node in get_node("./Clues").get_children(): #add the actual clues and false clues
 		interactLocations.append([node.global_position, node.get_meta("clue_number")])
+
+
+func _on_main_ready() -> void:
+	path = navigation.get_ideal_path(self.global_position, destination)
