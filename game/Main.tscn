@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dgl4urqk8xhgf"]
 
-[ext_resource type="Script" uid="uid://v6wm31hfidg5" path="res://main.gd" id="1_20pc6"]
+[ext_resource type="Script" path="res://main.gd" id="1_20pc6"]
 [ext_resource type="PackedScene" uid="uid://n7dt6wbqnp1n" path="res://Map.tscn" id="1_trn2v"]
 [ext_resource type="PackedScene" uid="uid://cjxlrp0k0y7su" path="res://NPCs/family_daughter.tscn" id="2_03owx"]
 [ext_resource type="PackedScene" uid="uid://dmks875iedqku" path="res://NPCs/family_grandma.tscn" id="3_wkp8b"]
@@ -9,8 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://cknm8ncryhn7x" path="res://NPCs/family_wife.tscn" id="6_c6i3y"]
 [ext_resource type="PackedScene" uid="uid://da6qpp2nb8mdx" path="res://Investigator.tscn" id="7_c2ibq"]
 [ext_resource type="PackedScene" uid="uid://bfwav4omi04ro" path="res://Player.tscn" id="8_j4qnp"]
-[ext_resource type="PackedScene" uid="uid://c326xvikq65wr" path="res://Clue.tscn" id="9_03owx"]
-[ext_resource type="Texture2D" uid="uid://bywyhav35a6kt" path="res://Assets/Ninja Adventure - Asset Pack/Items/Food/Nut.png" id="10_5vvyt"]
 [ext_resource type="PackedScene" uid="uid://v8obrdlposyf" path="res://UI.tscn" id="10_wkp8b"]
 
 [node name="Main" type="Node2D" unique_id=1274673833]
@@ -195,7 +193,7 @@ texture = ExtResource("10_5vvyt")
 [node name="Clues" type="Node2D" parent="." unique_id=1531716243]
 
 [node name="EmptyMedicationBottle" parent="Clues" unique_id=1541945220 instance=ExtResource("9_03owx")]
-position = Vector2(277, 256)
+position = Vector2(-3, -32)
 scale = Vector2(0.5, 0.5)
 metadata/sprite_image = "uid://ecd88ux7acmu"
 metadata/clue_number = 1
@@ -213,8 +211,9 @@ metadata/sprite_image = "uid://dvlk2x6p48l3j"
 metadata/clue_number = 3
 
 [node name="ComputerWithPlantedSearchHistory" parent="Clues" unique_id=1939759915 instance=ExtResource("9_03owx")]
-position = Vector2(-8, -49)
-scale = Vector2(0.5, 0.5)
+position = Vector2(293, 211)
+scale = Vector2(0.25, 0.25)
+metadata/sprite_image = "uid://c8g0omgf0vc6x"
 metadata/clue_number = 4
 
 [node name="ScreenBlock" type="CanvasLayer" parent="." unique_id=349775312]
@@ -233,3 +232,5 @@ color = Color(0, 0, 0, 1)
 [node name="player" parent="." unique_id=278388439 instance=ExtResource("8_j4qnp")]
 position = Vector2(37, 53)
 scale = Vector2(0.04, 0.04)
+
+[connection signal="ready" from="." to="Investigator" method="_on_main_ready"]
