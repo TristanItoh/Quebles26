@@ -38,6 +38,7 @@ position = Vector2(-41, 19)
 position = Vector2(32, 36)
 
 [node name="OtherInvestigationSpotsWithoutClues" type="Node2D" parent="." unique_id=1335766583]
+visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="OtherInvestigationSpotsWithoutClues" unique_id=1119186105]
 position = Vector2(132, -87)
