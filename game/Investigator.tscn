@@ -32,7 +32,6 @@ offset_left = -16.0
 offset_top = -24.0
 offset_right = 16.0
 offset_bottom = -1.0
-text = "3:00"
 
 [node name="Clues" type="Node2D" parent="." unique_id=1210563993]
 position = Vector2(-53, -109)

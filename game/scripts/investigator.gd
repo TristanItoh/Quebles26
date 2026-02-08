@@ -4,6 +4,7 @@ extends Node2D
 @onready var nextClue = self.get_meta("next_clue")
 @onready var navigation = self.get_node("/root/Main/Map/Floor/Walkable")
 @onready var daughter = self.get_node("./Daughter/CharacterBody2D")
+@onready var clock = self.get_node("/root/UI/Countdown")
 @export var display_name: String
 @export var portrait: Texture2D
 var state = 0 #0 means the investigator should go to a new location, 1 means traveling to a new location, 2 means investigating a location
@@ -26,12 +27,13 @@ var daughterSaidInvestigateWill = false
 func _process(_delta: float) -> void:
 	#figure out what room the investigator is currently in, can place area2Ds around the map and check if the investigator is overlapping one of them to determine the room
 	#roomNumber = currentRoom
-	
-	if timerUntilDoneInvestigating and timerUntilDoneInvestigating.time_left > 0:
+	if (timerUntilDoneInvestigating and timerUntilDoneInvestigating.time_left > 0):
 		var time_left = int(timerUntilDoneInvestigating.time_left)
-		var minutes = time_left / 60
-		var seconds = time_left % 60
-		$Label.text = "%02d:%02d" % [minutes, seconds]
+		$Label.text = str(time_left)
+		
+	if timerUntilDoneInvestigating == null:
+		$Label.text = ""
+	
 
 	
 	print("investigator state: " + str(state))
