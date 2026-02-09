@@ -10,7 +10,7 @@ The contents of "./game/Assets/Audio" (except the .import files) are from https:
 
 The file "./game/Assets/story time.ogg" is from https://opengameart.org/content/story-time under the Creative Commons Zero license (https://creativecommons.org/public-domain/cc0/)
 
-The files "./game/Assets/PixelOperator*.ttf" (all the Pixel Operator .ttf files) from https://www.dafont.com/pixel-operator.font under Creative Commons Zero 1.0 license 
+The files "./game/Assets/PixelOperator*.ttf" (all the Pixel Operator .ttf files) are from https://www.dafont.com/pixel-operator.font under Creative Commons Zero 1.0 license 
 
 Other files in the "./game/Assets" folder (except the .import files) are under Creative Commons Zero license (https://creativecommons.org/public-domain/cc0/)
 
