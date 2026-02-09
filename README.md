@@ -22,5 +22,4 @@ WASD/Arrow Keys: Move player<br>
 E: Possess items
 
 ## 📝 Licenses
-This project is licensed under the MIT License.<br>
 Please see LICENSE.md
